@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+  --error-color: #dc3545;
+  --success-color: #28a745;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Without height display flex NOT work */
+  margin: 0;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%239C92AC' fill-opacity='0.35' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
+}
+.container {
+  width: 400px;
+  height: auto;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 5px;
+  padding-bottom: 15px;
+  /* position: relative; */
+}
+
+.forn-control label {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.form-control input {
+  border: 2px solid rgb(241, 233, 233);
+  border-radius: 4px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  font-size: 14px;
+}
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input{ 
+  border-color: var(--success-color);
+}
+.form-control.error input{
+  border-color: var(--error-color);
+}
+
+.form-control small{
+  color: var(--error-color);
+  visibility: hidden;
+  /* display: none; // Collapse */
+}
+
+.form-control.error small{
+  visibility: visible;
+}
+.form button {
+  background-color: rgb(0, 85, 197);
+  padding: 14px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  border: none;
+}
+.form button:active {
+  cursor: pointer;
+  transform: translateY(4px);
+}
